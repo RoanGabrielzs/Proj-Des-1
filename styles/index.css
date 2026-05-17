@@ -1,0 +1,430 @@
+/* -------------------------------------------------------------
+           1. VARIÁVEIS DE CORES 
+------------------------------------------------------------- */
+:root {
+  --verde-floresta: #2f5d50;
+  --verde-folha: #7faf93;
+  --verde-musgo: #4c6b5a;
+  --azul-petroleo: #1f3b4d;
+  --azul-profundo: #0f2233;
+  --azul-acinzentado: #3e5c6e;
+  --branco-suave: #f5f7f4;
+  --cinza-claro: #e2e6e1;
+  --cinza-escuro-texto: #2b2b2b;
+  --amarelo-solar: #f2c14e;
+}
+
+/* -------------------------------------------------------------
+           2. CONFIGURAÇÕES GERAIS 
+------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--branco-suave);
+  color: var(--cinza-escuro-texto);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 1200px; /* Garante estabilidade de layout para desktops */
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------------------------------------------------
+           3. ESTILIZAÇÃO
+------------------------------------------------------------- */
+
+/* --- BLCO: HEADER --- */
+.header {
+  background-color: var(--azul-profundo);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--verde-floresta);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header--hidden {
+  transform: translateY(-100%); /* Esconde o header  para cima da tela */
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  height: 70px;
+  width: auto;
+}
+
+.header__nav {
+  display: flex;
+  gap: 40px;
+}
+
+.header__link {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.header__brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 15px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.header__link:hover {
+  color: var(--verde-folha);
+}
+
+/* --- BLOCO: HERO --- */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: var(--azul-profundo);
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 34, 51, 0.95) 30%,
+    rgba(15, 34, 51, 0.2) 100%
+  );
+  z-index: -1;
+}
+
+.hero__content {
+  max-width: 750px;
+  z-index: 1;
+}
+
+.hero__title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero__title--highlight {
+  color: var(--verde-folha);
+  display: block;
+  font-size: 56px;
+  margin-top: 10px;
+}
+
+.hero__caption {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--cinza-claro);
+  margin-bottom: 40px;
+}
+
+/* --- BLOCO: NAV-DECADES (ÂNCORES HORIZONTAIS) --- */
+.nav-decades {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 15px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.nav-decades__item {
+  background-color: rgba(31, 59, 77, 0.8);
+  border: 1px solid var(--azul-acinzentado);
+  color: #ffffff;
+  padding: 14px 22px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-decades__item:hover {
+  background-color: var(--verde-floresta);
+  border-color: var(--verde-folha);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- BLOCO: SECTION (ESTRUTURA GERAL DAS SESSÕES) --- */
+.section {
+  padding: 100px 80px;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.section--info {
+  background-color: var(--branco-suave);
+}
+
+.section--help {
+  background-color: var(--azul-profundo);
+  color: #ffffff;
+}
+
+.section__title {
+  font-size: 36px;
+  color: var(--azul-petroleo);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section__title--light {
+  color: #ffffff;
+}
+
+.section__text {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* --- BLOCO: TIMELINE (EFEITO ALTERNADO) --- */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px 0;
+}
+
+/* A linha vertical do meio */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--azul-petroleo);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline__item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Configuração de posicionamento alternado esquerda/direita */
+.timeline__item--left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline__item--right {
+  left: 50%;
+  text-align: left;
+}
+
+/* As bolinhas da linha do tempo */
+.timeline__item::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: var(--amarelo-solar);
+  border: 4px solid var(--azul-petroleo);
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline__item--right::after {
+  left: -10px;
+}
+
+.timeline__year {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--verde-floresta);
+  margin-bottom: 10px;
+}
+
+.timeline__content {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--verde-floresta);
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.timeline__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cinza-escuro-texto);
+  text-align: justify;
+}
+
+/* --- BLOCO: BUTTON (MÓDULO DE DECISÃO TÉCNICA DE REDIRECIONAMENTO) --- */
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+/* Modificador: Chamativo para a Home */
+.btn--cta-strong {
+  background-color: #248a54; /* Verde forte chamativo */
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(36, 138, 84, 0.4);
+  margin-top: 20px;
+}
+
+.btn--cta-strong:hover {
+  background-color: #1b6b3e;
+  transform: scale(1.03);
+}
+
+/* Modificador: Convidativo/Leve para a Seção "Como Ajudar" */
+.btn--cta-light {
+  background-color: var(--verde-folha); /* Verde sutil de apoio */
+  color: var(--azul-profundo);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--cta-light:hover {
+  background-color: var(--verde-musgo);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --- MIX DE LAYOUT: CONTAINER DE DOAÇÕES LADO A LADO --- */
+.donation-hub {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.donation-hub__card {
+  background-color: rgba(31, 59, 77, 0.5);
+  border: 1px solid var(--azul-acinzentado);
+  padding: 30px;
+  border-radius: 6px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donation-hub__title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--amarelo-solar);
+}
+
+/* RODAPÉ DO SITE */
+.footer {
+  background-color: var(--azul-profundo);
+  color: #ffffff;
+  padding: 40px 20px;
+  border-top: 2px solid var(--verde-floresta);
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo-img {
+  height: 45px;
+  width: auto;
+}
+
+.footer__brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.footer__credits {
+  font-size: 14px;
+  color: var(--verde-folha);
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.5;
+}

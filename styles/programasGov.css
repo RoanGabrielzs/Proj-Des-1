@@ -1,0 +1,167 @@
+:root {
+  --azul-profundo: #0f2233;
+  --azul-petroleo: #1f3b4d;
+  --verde-floresta: #2f5d50;
+  --verde-folha: #7faf93;
+  --verde-musgo: #4c6b5a;
+  --branco-suave: #f5f7f4;
+  --cinza-claro: #e2e6e1;
+  --cinza-escuro-texto: #2b2b2b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--branco-suave);
+  color: var(--cinza-escuro-texto);
+  padding-top: 100px;
+}
+
+/* CABEÇALHO DA SUBPÁGINA */
+.header {
+  background-color: var(--azul-profundo);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--verde-floresta);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header__logo-img {
+  height: 70px;
+  width: auto;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 15px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.header__btn-back {
+  background-color: transparent;
+  border: 1px solid var(--verde-folha);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__btn-back:hover {
+  background-color: var(--verde-folha);
+  color: var(--azul-profundo);
+}
+
+/* ESTRUTURA DO CONTEÚDO */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title-page {
+  font-size: 36px;
+  color: var(--azul-petroleo);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.subtitle-page {
+  font-size: 16px;
+  color: var(--cinza-escuro-texto);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* LISTA DE CARDS */
+.ong-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.ong-card {
+  background-color: #ffffff;
+  border-left: 6px solid var(--verde-floresta);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ong-card__info {
+  max-width: 70%;
+}
+
+.ong-card__name {
+  font-size: 24px;
+  color: var(--azul-petroleo);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.ong-card__historia {
+  font-size: 14px;
+  color: var(--verde-musgo);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.ong-card__atuacao {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cinza-escuro-texto);
+}
+
+/* BOTÃO VERDE REPLICANDO PADRÃO DA HOME */
+.btn--donate-strong {
+  display: inline-block;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  background-color: #248a54;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(36, 138, 84, 0.3);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--donate-strong:hover {
+  background-color: #1b6b3e;
+  transform: scale(1.04);
+}

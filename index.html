@@ -1,52 +1,460 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Panorama das Fontes de Energia Sustentável</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="icon" href="images/logoReViva.png" />
   </head>
   <body>
-    <!--  Banner  -->
     <header class="header">
-      <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="/"> </a>
-        </div>
-
-        <!--  Barra de navegação  -->
-        <nav class="navbar">
-          <ul>
-            <!-- <li>Início</li> -->
-            <li>
-              <a href="/">Informe-se</a>
-              <!-- adicionar páginas sobre amazônia, oceanos, povos nativos, clima -->
-            </li>
-            <li>
-              <a href="/">O que fazemos</a>
-              <!-- breve resumo sobre o objetivo da página e da criação -->
-            </li>
-            <li>
-              <a href="/">Notícias</a>
-              <!-- criar/copiar de outros sites -->
-            </li>
-            <li class="como_ajudar">
-              <!--parecer um botão ou ter uma cor diferente dos outros.-->
-              <!--Isso guia o olho do usuário diretamente para a ação principal.-->
-              <a href="/">Como ajudar</a>
-
-              <!-- adicionar links e redirecionamentos a ONGs de doações e ter uma parte de "Pequenas Iniciativas" -->
-              <!-- contendo ações pequenas que fazem uma diferença exponencial -->
-            </li>
-          </ul>
-        </nav>
+      <div class="header__logo-container">
+        <img
+          src="images/logoReViva.svg"
+          alt="Logo do Projeto"
+          class="header__logo-img"
+        />
+        <span class="header__brand-name">ReViva</span>
       </div>
+      <nav class="header__nav">
+        <a href="#informe-se" class="header__link">Informe-se</a>
+        <a href="#linha-do-tempo" class="header__link">Linha do Tempo</a>
+        <a href="#como-ajudar" class="header__link">Como Ajudar</a>
+      </nav>
     </header>
 
-    <!-- Conteúdo -->
-    <main></main>
+    <section class="hero">
+      <div class="hero__bg">
+        <img
+          src="images/welcomeImage.jpg"
+          alt="Background Transição Climática"
+          class="hero__bg-img"
+        />
+      </div>
+      <div class="hero__overlay"></div>
 
-    <!--  Rodapé  -->
-    <footer></footer>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Faça a Transição
+          <span class="hero__title--highlight">Acontecer</span>
+        </h1>
+        <p class="hero__caption">
+          Somos um panorama educacional dedicado a mapear as tentativas da
+          humanidade para substituir o modelo fóssil. Role para baixo para
+          descobrir mais sobre esta história ou, se preferir, viaje diretamente
+          entre as décadas.
+        </p>
+
+        <div class="nav-decades">
+          <a href="#ano-1828" class="nav-decades__item">1828–1850</a>
+          <a href="#ano-1850" class="nav-decades__item">1850–1900</a>
+          <a href="#ano-1900" class="nav-decades__item">1900–1950</a>
+          <a href="#ano-1950" class="nav-decades__item">1950–1970</a>
+          <a href="#ano-1970" class="nav-decades__item">1970</a>
+          <a href="#ano-1980" class="nav-decades__item">1980–2000</a>
+          <a href="#ano-2000" class="nav-decades__item">2000+</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--info" id="informe-se">
+      <h2 class="section__title">O Projeto</h2>
+      <p class="section__text">
+        Este portal informativo descreve os esforços do ser humano em
+        <strong> reduzir a dependência energética do petróleo </strong>. Ao
+        longo de séculos, cientistas e inventores propuseram caminhos
+        alternativos que esbarraram na falta de incentivo amplo. A verdade é que
+        a nossa busca por alternativas não começou ontem: desde os primeiros
+        motores solares desenvolvidos lá no século XIX até o sufoco das crises
+        globais de abastecimento na década de 1970, correr atrás de autonomia
+        energética sempre foi uma mistura de sobrevivência, genialidade e muita
+        persistência. <br />
+        <strong
+          >Olhar para trás e entender como chegamos até aqui é o melhor caminho
+          para dar o empurrão que falta para um futuro realmente limpo e
+          renovável.</strong
+        >
+        Hoje, com os desafios climáticos batendo à porta, o uso de fontes como a
+        energia solar, eólica e a biomassa deixou de ser apenas um plano de
+        laboratório ou uma teoria de cientista e virou uma necessidade real para
+        o planeta. <br />
+        A intenção com este projeto é
+        <strong>resgatar essas grandes histórias</strong> e descobertas do
+        passado para abrir os olhos e
+        <strong>inspirar ações práticas</strong> no presente. Queremos
+        <strong>mostrar que todo mundo pode fazer a diferença</strong>,
+        conectando quem quer ajudar a redes de apoio que atuam no dia a dia,
+        como as grandes ONGs e as principais diretrizes ecológicas.
+      </p>
+      <a href="#como-ajudar" class="btn btn--cta-strong"
+        >Quero Saber Como Ajudar</a
+      >
+    </section>
+
+    <section
+      class="section"
+      id="linha-do-tempo"
+      style="background-color: var(--cinza-claro)"
+    >
+      <h2 class="section__title" style="text-align: center">
+        A Evolução das Energias Sustentáveis
+      </h2>
+      <div class="timeline">
+        <div class="timeline__item timeline__item--left" id="ano-1828">
+          <div class="timeline__year">1828–1850</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Carro elétrico primitivo de Ányos Jedlik (1828) e descoberta do
+              efeito fotovoltaico por Edmond Becquerel (1839). -->
+              O início da busca por alternativas energéticas aconteceu
+              <b>muito antes do que a maioria das pessoas imagina</b>. Em
+              <em>1828</em>, o inventor húngaro Ányos Jedlik desenvolveu um dos
+              primeiros protótipos de motor elétrico do mundo e o colocou para
+              rodar em um carrinho em miniatura, provando a viabilidade da
+              tração elétrica
+              <b>décadas antes do primeiro motor a combustão dominar as ruas</b
+              >. <br />
+              Pouco tempo depois, em <em>1839</em>, um jovem físico francês de
+              <em>apenas 19 anos</em> chamado Edmond Becquerel
+              <b
+                >descobriu, por puro experimento laboratorial, o efeito
+                fotovoltaico</b
+              >
+              ao notar que a luz gerava corrente elétrica em eletrodos imersos
+              em uma solução química. Embora fossem tecnologias primitivas para
+              a época, esses dois estalos de genialidade acenderam a
+              <b
+                >faísca inicial para as duas maiores revoluções sustentáveis que
+                vivemos hoje: o carro elétrico e a energia solar</b
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--right" id="ano-1850">
+          <div class="timeline__year">1850–1900</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Motores solares de Augustin Mouchot (1860) e a primeira usina
+              hidrelétrica em Niagara Falls (1881). -->
+              Em <em>1860</em>, Augustin Mouchot já imaginava
+              <em
+                >algo que parecia distante demais para a tecnologia da época:
+                usar a energia do Sol para fazer máquinas funcionarem</em
+              >. Seus motores solares, ainda experimentais, conseguiam
+              concentrar luz para gerar vapor e movimento. Uma ideia simples na
+              teoria, mas revolucionária na prática.
+              <b
+                >Em um mundo totalmente dependente de carvão, pensar no Sol como
+                fonte de energia útil era quase uma provocação ao modelo
+                energético dominante</b
+              >. <br />
+              Algumas <em>décadas depois</em>, <em>em 1881</em>, outro marco
+              muda o rumo da história: a
+              <b>primeira usina hidrelétrica em Niagara Falls começa a operar</b
+              >. Pela primeira vez, a força gigantesca da água em movimento é
+              convertida em eletricidade em escala real, mostrando que
+              <b
+                >a natureza podia ser mais do que cenário, podia ser fonte
+                direta de energia.</b
+              >
+              <br />
+              O mais curioso é perceber como esses dois caminhos, aparentemente
+              diferentes, o calor do Sol e a força da água, começam a desenhar a
+              mesma ideia: a de que a energia do futuro não precisava vir de
+              algo queimado, mas sim de algo já presente na própria natureza.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--left" id="ano-1900">
+          <div class="timeline__year">1900–1950</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Primeira usina geotérmica na Itália (1911) e usina solar térmica
+              de Frank Shuman no Egito (1913). -->
+              Cientistas decidiram olhar para onde ninguém jamais imaginaria
+              procurar energia ao descerem direto nas
+              <b>profundezas da Terra</b>. Foi assim que, em <em>1911</em>, a
+              região de Larderello na Itália testemunhou a construção da
+              <b>primeira usina geotérmica do mundo</b>, canalizando o vapor
+              escaldante que subia do subsolo para girar turbinas pesadas. Uma
+              inovação inacreditável para a época, que provou que
+              <b
+                >o próprio calor interno do planeta guardava uma força elétrica
+                quase infinita</b
+              >. <br />
+              Seguindo essa mesma linha de testar limites, o inventor Frank
+              Shuman levou a busca por alternativas ao extremo em
+              <em>1913</em> ao erguer a
+              <b>primeira usina solar térmica de grande escala no Egito</b>.
+              Utilizando calhas espelhadas gigantescas no meio do deserto, seu
+              sistema concentrava o sol escaldante para bombear milhares de
+              litros de água por minuto, transformando a agricultura local.
+              <br />
+              O grande choque dessa época é histórico: Shuman chegou a declarar
+              que aquela tecnologia
+              <b
+                >libertaria a humanidade da dependência dos combustíveis
+                fósseis</b
+              >, mas logo em seguida estourou a <b>Primeira Guerra Mundial</b> e
+              o petróleo barato soterrou esses planos. Dois caminhos brutais, o
+              calor do subterrâneo e a fúria do sol no deserto, que mostraram o
+              potencial de um futuro que acabou pausado pela história.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--right" id="ano-1950">
+          <div class="timeline__year">1950–1970</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Célula solar de silício moderna da Bell Labs (1954) e satélite
+              Vanguard I em órbita espacial (1958). -->
+              Em <em>1954</em>, nos famosos laboratórios da Bell Labs,
+              cientistas alcançaram o que muitos consideravam ficção científica:
+              <em
+                >transformar a luz do Sol diretamente em eletricidade
+                utilizável</em
+              >. Ali nascia a <b>primeira célula solar de silício moderna</b>,
+              com eficiência suficiente para fazer pequenos aparelhos
+              funcionarem. Embora o custo de fabricação na época fosse
+              astronômico, a invenção quebrou uma barreira histórica ao provar
+              que
+              <b
+                >o silício — basicamente areia purificada — podia se tornar a
+                maior fonte de energia limpa da humanidade</b
+              >. <br />
+              Apenas <em>quatro anos depois, em 1958</em>, essa tecnologia
+              encontrou o seu verdadeiro palco: o espaço. O
+              <b>satélite Vanguard I foi lançado em órbita</b> equipado com
+              esses novos painéis solares. Enquanto as baterias convencionais de
+              outros satélites duravam poucos dias, as células solares
+              permitiram que o Vanguard transmitisse dados por anos, provando
+              que
+              <b
+                >a energia fotovoltaica era a única alternativa viável para
+                explorar o universo</b
+              >.
+              <br />
+              O impacto desse período foi definitivo: a mesma tecnologia que
+              começou em um laboratório fechado acabou conquistando a órbita da
+              Terra, desenhando o início de uma era onde os painéis solares
+              finalmente deixavam de ser uma promessa distante para se tornarem
+              uma realidade tecnológica de ponta.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--left" id="ano-1970">
+          <div class="timeline__year">1970</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              Na década de <em>1970</em>, o mundo sofreu um choque de realidade
+              brutal. Com as <em>crises globais do petróleo</em>, o preço do
+              combustível disparou e países inteiros viram suas economias
+              balançarem, provando o perigo de depender de uma única fonte de
+              energia. Esse sufoco geopolítico forçou governos e indústrias a
+              correrem contra o tempo, injetando
+              <b
+                >investimentos bilionários e urgentes em laboratórios de fomento
+                de matrizes renováveis</b
+              >. <br />
+              O que antes era visto apenas como "projetos ecológicos" ou
+              experimentos de cientistas, da noite para o dia, virou uma
+              <b>questão de segurança nacional</b>. Foi nesse cenário de caos
+              que os painéis solares e os aerogeradores de vento começaram a
+              sair dos laboratórios de ponta para ganhar escala comercial real,
+              mostrando que
+              <b
+                >a busca por energia limpa nunca foi apenas pelo planeta, mas
+                também pela sobrevivência econômica da humanidade</b
+              >.
+              <br />
+              O mais irônico desse período é perceber que foi necessária uma
+              grande crise no bolso do mundo para que as alternativas enterradas
+              no passado fossem finalmente levadas a sério, transformando os
+              anos 70 no verdadeiro trampolim para a tecnologia sustentável
+              moderna.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--right" id="ano-1980">
+          <div class="timeline__year">1980–2000</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Primeiro parque eólico comercial do mundo (1980) e assinatura do
+              Protocolo de Kyoto (1997). -->
+              As correntes de ar deixaram de ser apenas uma promessa poética e
+              viraram um negócio real quando, em <em>1980</em>, New Hampshire
+              inaugurou o <em>primeiro parque eólico comercial do mundo</em>.
+              Composto por 20 turbinas geradoras, o projeto pioneiro nos Estados
+              Unidos provou que
+              <b
+                >era possível produzir energia limpa em massa e conectá-la
+                direto à rede elétrica</b
+              >
+              de cidades inteiras. Embora essas primeiras máquinas enfrentassem
+              falhas e resistência, o vento soprou a favor da história,
+              mostrando que
+              <b
+                >a atmosfera guardava o potencial para competir de frente com as
+                grandes usinas tradicionais</b
+              >. <br />
+              Dando um salto para o final do século, o ano de
+              <em>1997</em> marcou o maior passo político já visto em prol do
+              planeta com a assinatura do <b>Protocolo de Kyoto</b>, no Japão.
+              Pela primeira vez na história moderna, as maiores potências
+              mundiais se uniram para carimbar um tratado com
+              <b>metas obrigatórias de redução de gases poluentes</b>.
+              <br />
+              O cruzamento desses dois momentos é crucial: enquanto os anos 80
+              entregaram a tecnologia comercial que o mundo precisava, os anos
+              90 trouxeram a urgência diplomática que faltava. A transição
+              energética finalmente deixava de ser uma escolha de inventores
+              isolados e virava um compromisso global obrigatório.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item timeline__item--left" id="ano-2000">
+          <div class="timeline__year">2000+</div>
+          <div class="timeline__content">
+            <p class="timeline__text">
+              <!-- Barateamento drástico da tecnologia fotovoltaica distribuída e
+              expansão global automotiva elétrica. -->
+              A virada do milênio trouxe consigo a verdadeira revolução
+              silenciosa: a transformação de tecnologias que antes eram
+              exclusivas de laboratórios em produtos acessíveis para o cidadão
+              comum. A partir dos anos <em>2000</em>, o mundo testemunhou um
+              <em
+                >barateamento drástico da tecnologia fotovoltaica
+                distribuída</em
+              >, com o custo dos painéis solares despencando mais de 80% em
+              poucos anos. Isso permitiu que
+              <b
+                >gerar a própria energia no telhado de casa deixasse de ser uma
+                utopia ecológica e virasse uma decisão financeira inteligente</b
+              >
+              para milhões de famílias globalmente. <br />
+              Pegando carona nessa mesma evolução das baterias, a última década
+              consolidou a
+              <b>expansão global da indústria automotiva elétrica</b>. O que
+              começou com protótipos desacreditados transformou-se em estradas
+              tomadas por veículos silenciosos, mostrando que
+              <b
+                >a mobilidade urbana do século XXI cortou de vez o cordão
+                umbilical com os combustíveis fósseis</b
+              >.
+              <br />
+              O fechamento dessa linha do tempo deixa um aprendizado claro: o
+              Sol capturado nos telhados agora abastece diretamente os carros
+              nas garagens. O futuro que Augustin Mouchot e Edmond Becquerel
+              tatearam no século XIX finalmente ganhou escala massiva, provando
+              que a energia limpa não é mais o amanhã — ela já é o nosso
+              presente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--help" id="como-ajudar">
+      <h2 class="section__title section__title--light">Como Ajudar</h2>
+      <p class="section__text">
+        Pequenas ações no cotidiano somam forças. Escolha abaixo qual tipo de
+        iniciativa você deseja conhecer e apoiar de forma ativa.
+      </p>
+
+      <div class="donation-hub">
+        <div class="donation-hub__card">
+          <h3 class="donation-hub__title">Grandes ONGs</h3>
+          <p
+            style="
+              margin-bottom: 20px;
+              font-size: 15px;
+              color: var(--cinza-claro);
+            "
+          >
+            Apoie instituições globais consolidadas que lutam pelo clima e
+            conservação de biomas.
+          </p>
+          <a href="/pages/ongs.html" class="btn btn--cta-light"
+            >Acessar Projetos</a
+          >
+        </div>
+        <div class="donation-hub__card">
+          <h3 class="donation-hub__title">Programas Governamentais</h3>
+          <p
+            style="
+              margin-bottom: 20px;
+              font-size: 15px;
+              color: var(--cinza-claro);
+            "
+          >
+            Conheça fundos regulamentados e diretrizes transnacionais de
+            infraestrutura verde.
+          </p>
+          <a href="pages/programasGov.html" class="btn btn--cta-light"
+            >Conhecer Programas</a
+          >
+        </div>
+        <div class="donation-hub__card">
+          <h3 class="donation-hub__title">Iniciativas Independentes</h3>
+          <p
+            style="
+              margin-bottom: 20px;
+              font-size: 15px;
+              color: var(--cinza-claro);
+            "
+          >
+            Colabore diretamente com organizações focadas em conservação
+            marítima e florestal.
+          </p>
+          <a href="pages/independentes.html" class="btn btn--cta-light"
+            >Contribuir Agora</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <img
+            src="images/logoReViva.svg"
+            alt="Logo ReViva"
+            class="footer__logo-img"
+          />
+          <span class="footer__brand-name">ReViva</span>
+        </div>
+
+        <p class="footer__credits">
+          Desenvolvido para fins acadêmicos &copy; 2026. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let lastScrollTop = 0;
+      const header = document.querySelector(".header");
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          // Se rolar para baixo e passar da altura do próprio header, esconde
+          if (scrollTop > lastScrollTop && scrollTop > 80) {
+            header.classList.add("header--hidden");
+          } else {
+            // Se rolar para cima, mostra o header novamente
+            header.classList.remove("header--hidden");
+          }
+
+          // Atualiza a última posição do scroll
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        },
+        { passive: true },
+      );
+    </script>
   </body>
 </html>
